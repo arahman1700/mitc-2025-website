@@ -84,15 +84,15 @@
         }
         
         .issue-badge.critical {
-            background: rgba(248, 113, 113, 0.2);
-            color: #F87171;
-            border: 1px solid rgba(248, 113, 113, 0.3);
+            background: rgba(128, 209, 233, 0.2);
+            color: #80D1E9;
+            border: 1px solid rgba(128, 209, 233, 0.3);
         }
         
         .issue-badge.warning {
-            background: rgba(251, 191, 36, 0.2);
-            color: #FBBF24;
-            border: 1px solid rgba(251, 191, 36, 0.3);
+            background: rgba(96, 165, 250, 0.2);
+            color: #60A5FA;
+            border: 1px solid rgba(96, 165, 250, 0.3);
         }
         
         .issue-badge.info {
@@ -489,11 +489,11 @@
                 <div class="p-6">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <!-- Dammam Warehouse -->
-                        <a href="sites/dammam.html" class="site-card block border-red-400/30">
+                        <a href="sites/dammam.html" class="site-card block border-[#80D1E9]/30">
                             <div class="flex items-start justify-between mb-3">
                                 <div>
                                     <span class="text-xs px-2 py-0.5 rounded type-warehouse">Warehouse</span>
-                                    <span class="text-xs px-2 py-0.5 rounded bg-red-400/20 text-red-400 ml-1">Critical</span>
+                                    <span class="text-xs px-2 py-0.5 rounded bg-[#80D1E9]/20 text-[#80D1E9] ml-1">High Priority</span>
                                     <h3 class="font-semibold mt-2">Dammam Warehouse</h3>
                                     <p class="text-xs text-[#80D1E9]">Main Eastern Hub</p>
                                 </div>
@@ -511,7 +511,7 @@
                                 </div>
                             </div>
                             <div class="mt-3 pt-3 border-t border-white/10 text-xs text-[#80D1E9]">
-                                44 Photos, 5 Videos | Priority: Critical
+                                44 Photos, 5 Videos | Priority: High
                             </div>
                         </a>
                         
@@ -851,10 +851,10 @@
         // Issues by Region Chart
         var issueOptions = {
             series: [{
-                name: 'Critical',
+                name: 'High',
                 data: [2, 3, 0]
             }, {
-                name: 'Warning',
+                name: 'Medium',
                 data: [8, 9, 2]
             }, {
                 name: 'Info',
@@ -869,7 +869,7 @@
                     show: false
                 }
             },
-            colors: ['#F87171', '#FBBF24', '#60A5FA'],
+            colors: ['#80D1E9', '#60A5FA', '#A78BFA'],
             plotOptions: {
                 bar: {
                     horizontal: false,

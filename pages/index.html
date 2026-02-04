@@ -235,6 +235,64 @@
             font-weight: 600;
         }
 
+        /* Sites Sub-tab Toggle */
+        .sites-subtab {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(128,209,233,0.2);
+            color: #80D1E9;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .sites-subtab:hover {
+            background: rgba(128,209,233,0.1);
+            border-color: rgba(128,209,233,0.4);
+        }
+        .sites-subtab.active {
+            background: linear-gradient(135deg, #2E3192 0%, #0E2841 100%);
+            border-color: #80D1E9;
+            color: #FFFFFF;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(46,49,146,0.3);
+        }
+
+        /* PDF Record Cards */
+        .pdf-record-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: rgba(14,40,65,0.6);
+            border: 1px solid rgba(128,209,233,0.15);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .pdf-record-card:hover {
+            background: rgba(14,40,65,0.9);
+            border-color: rgba(128,209,233,0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .pdf-record-info { flex: 1; }
+        .pdf-record-title { font-weight: 700; font-size: 15px; color: #FFFFFF; margin-bottom: 2px; }
+        .pdf-record-file { font-size: 12px; color: rgba(128,209,233,0.6); }
+        .pdf-record-icon {
+            width: 44px; height: 44px; border-radius: 10px;
+            background: rgba(128,209,233,0.1);
+            display: flex; align-items: center; justify-content: center;
+            color: #80D1E9; flex-shrink: 0; margin-left: 16px;
+        }
+        .pdf-record-card:hover .pdf-record-icon { background: rgba(128,209,233,0.2); color: #FFFFFF; }
+
         /* Hide scrollbar but keep functionality */
         .nav-tabs::-webkit-scrollbar {
             height: 4px;
@@ -879,63 +937,63 @@
                 </div>
             </div>
 
-            <!-- Section 5: Critical Issues Summary -->
+             <!-- Section 5: Key Issues Summary -->
             <div class="card p-6 mb-8">
                 <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-                    <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-[#80D1E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    Critical Issues Summary
+                    Key Issues Summary
                 </h3>
                 <div class="grid md:grid-cols-3 gap-4 mb-6">
-                    <div class="stat-card bg-red-400/10 border-red-400/30">
-                        <p class="text-3xl font-bold text-red-400">11</p>
+                    <div class="stat-card bg-[#80D1E9]/10 border-[#80D1E9]/30">
+                        <p class="text-3xl font-bold text-[#80D1E9]">11</p>
                         <p class="text-sm text-white/70">High Priority Issues</p>
                     </div>
-                    <div class="stat-card bg-amber-400/10 border-amber-400/30">
-                        <p class="text-3xl font-bold text-amber-400">20-40%</p>
+                    <div class="stat-card bg-blue-400/10 border-blue-400/30">
+                        <p class="text-3xl font-bold text-blue-400">20-40%</p>
                         <p class="text-sm text-white/70">Scrap Capacity Impact</p>
                     </div>
-                    <div class="stat-card bg-blue-400/10 border-blue-400/30">
-                        <p class="text-3xl font-bold text-blue-400">3</p>
+                    <div class="stat-card bg-purple-400/10 border-purple-400/30">
+                        <p class="text-3xl font-bold text-purple-400">3</p>
                         <p class="text-sm text-white/70">Security Concerns</p>
                     </div>
                 </div>
                 <div class="space-y-3">
-                    <div class="issue-card critical">
+                    <div class="issue-card">
                         <div class="flex justify-between items-start">
                             <div>
                                 <h4 class="font-semibold">Dammam Warehouse</h4>
                                 <p class="text-sm text-white/60">Security and access control improvements needed</p>
                             </div>
-                            <span class="badge badge-danger">Critical</span>
+                            <span class="badge badge-info">Noted</span>
                         </div>
                     </div>
-                    <div class="issue-card critical">
+                    <div class="issue-card">
                         <div class="flex justify-between items-start">
                             <div>
                                 <h4 class="font-semibold">RUMAH BSP</h4>
                                 <p class="text-sm text-white/60">Material security and inventory tracking issues</p>
                             </div>
-                            <span class="badge badge-danger">Critical</span>
+                            <span class="badge badge-info">Noted</span>
                         </div>
                     </div>
-                    <div class="issue-card critical">
+                    <div class="issue-card">
                         <div class="flex justify-between items-start">
                             <div>
                                 <h4 class="font-semibold">KSP Sites</h4>
                                 <p class="text-sm text-white/60">Multiple locations requiring security audit</p>
                             </div>
-                            <span class="badge badge-danger">Critical</span>
+                            <span class="badge badge-info">Noted</span>
                         </div>
                     </div>
-                    <div class="issue-card warning">
+                    <div class="issue-card">
                         <div class="flex justify-between items-start">
                             <div>
                                 <h4 class="font-semibold">Scrap Accumulation</h4>
                                 <p class="text-sm text-white/60">20-40% of warehouse capacity consumed by scrap materials</p>
                             </div>
-                            <span class="badge badge-warning">Action Required</span>
+                            <span class="badge badge-info">Action Required</span>
                         </div>
                     </div>
                 </div>
@@ -1034,7 +1092,7 @@
 
             <!-- Recent Issues -->
             <div class="card p-6">
-                <h3 class="text-lg font-bold mb-4">Critical Issues Requiring Attention</h3>
+                <h3 class="text-lg font-bold mb-4">Issues Requiring Attention</h3>
                 <div class="space-y-3" id="dashboard-critical-issues"></div>
             </div>
         </div>
@@ -1124,21 +1182,21 @@
                 <!-- Filters -->
                 <div class="flex flex-wrap gap-2">
                     <button class="filter-btn active" onclick="filterIssues('all')">All</button>
-                    <button class="filter-btn" onclick="filterIssues('critical')">Critical</button>
-                    <button class="filter-btn" onclick="filterIssues('warning')">Warning</button>
-                    <button class="filter-btn" onclick="filterIssues('info')">Info</button>
+                    <button class="filter-btn" onclick="filterIssues('critical')">High</button>
+                    <button class="filter-btn" onclick="filterIssues('warning')">Medium</button>
+                    <button class="filter-btn" onclick="filterIssues('info')">Low</button>
                 </div>
             </div>
 
             <!-- Issues Stats -->
             <div class="grid grid-cols-3 gap-4 mb-6">
-                <div class="stat-card border-l-4 border-l-red-400">
-                    <p class="text-2xl font-bold text-red-400" id="critical-count">12</p>
-                    <p class="text-sm text-white/70">Critical</p>
+                <div class="stat-card border-l-4 border-l-[#80D1E9]">
+                    <p class="text-2xl font-bold text-[#80D1E9]" id="critical-count">12</p>
+                    <p class="text-sm text-white/70">High Priority</p>
                 </div>
-                <div class="stat-card border-l-4 border-l-amber-400">
-                    <p class="text-2xl font-bold text-amber-400" id="warning-count">23</p>
-                    <p class="text-sm text-white/70">Warnings</p>
+                <div class="stat-card border-l-4 border-l-[#80D1E9]/60">
+                    <p class="text-2xl font-bold text-[#80D1E9]/80" id="warning-count">23</p>
+                    <p class="text-sm text-white/70">Observations</p>
                 </div>
                 <div class="stat-card border-l-4 border-l-blue-400">
                     <p class="text-2xl font-bold text-blue-400" id="info-count">10</p>
@@ -1193,25 +1251,81 @@
 
         <!-- Sites Tab -->
         <div id="sites" class="tab-content">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
-                <div>
-                    <h2 class="text-2xl font-bold">Sites & Locations</h2>
-                    <p class="text-[#80D1E9]">All documented warehouses and project sites</p>
-                </div>
-
-                <!-- Region Filters -->
-                <div class="flex flex-wrap gap-2">
-                    <button class="filter-btn active" onclick="filterSites('all')">All Regions</button>
-                    <button class="filter-btn" onclick="filterSites('central')">Central</button>
-                    <button class="filter-btn" onclick="filterSites('eastern')">Eastern</button>
-                    <button class="filter-btn" onclick="filterSites('northern')">Northern</button>
-                    <button class="filter-btn" onclick="filterSites('western')">Western</button>
-                    <button class="filter-btn" onclick="filterSites('southern')">Southern</button>
-                </div>
+            <!-- Sub-tab Toggle: Sites View vs Signed Records -->
+            <div class="flex flex-wrap gap-3 mb-6 border-b border-white/10 pb-4">
+                <button class="sites-subtab active" onclick="switchSitesSubtab('sites-view', this)">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    Sites & Locations
+                </button>
+                <button class="sites-subtab" onclick="switchSitesSubtab('signed-records-view', this)">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Signed Inventory Records
+                </button>
             </div>
 
-            <!-- Sites Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="sites-grid"></div>
+            <!-- Sub-view 1: Sites & Locations -->
+            <div id="sites-view">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-2xl font-bold">Sites & Locations</h2>
+                        <p class="text-[#80D1E9]">All documented warehouses and project sites</p>
+                    </div>
+
+                    <!-- Region Filters -->
+                    <div class="flex flex-wrap gap-2">
+                        <button class="filter-btn active" onclick="filterSites('all')">All Regions</button>
+                        <button class="filter-btn" onclick="filterSites('central')">Central</button>
+                        <button class="filter-btn" onclick="filterSites('eastern')">Eastern</button>
+                        <button class="filter-btn" onclick="filterSites('northern')">Northern</button>
+                        <button class="filter-btn" onclick="filterSites('western')">Western</button>
+                        <button class="filter-btn" onclick="filterSites('southern')">Southern</button>
+                    </div>
+                </div>
+
+                <!-- Sites Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="sites-grid"></div>
+            </div>
+
+            <!-- Sub-view 2: Signed Inventory Records -->
+            <div id="signed-records-view" style="display:none;">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-2xl font-bold">Signed Inventory Records</h2>
+                        <p class="text-[#80D1E9]">Official signed PDF documents for all committee inventory inspections</p>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-[#80D1E9]/70">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                        <span>24</span> Documents
+                    </div>
+                </div>
+
+                <!-- PDF Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="../docs/riyadh-warehouse.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Riyadh Warehouse</div><div class="pdf-record-file">riyadh-warehouse.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/dammam-warehouse-1.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Dammam Warehouse (1)</div><div class="pdf-record-file">dammam-warehouse-1.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/dammam-warehouse-2.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Dammam Warehouse (2)</div><div class="pdf-record-file">dammam-warehouse-2.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/madinah-warehouse.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Madinah Warehouse</div><div class="pdf-record-file">madinah-warehouse.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/ras-tanura.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Ras Tanura</div><div class="pdf-record-file">ras-tanura.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/asfan-warehouse.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Asfan Warehouse</div><div class="pdf-record-file">asfan-warehouse.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/diriyah-8242-1.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Diriyah 8242 (1)</div><div class="pdf-record-file">diriyah-8242-1.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/diriyah-8242-2.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Diriyah 8242 (2)</div><div class="pdf-record-file">diriyah-8242-2.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/diriyah-8242-3.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Diriyah 8242 (3)</div><div class="pdf-record-file">diriyah-8242-3.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/diriyah-8171.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Diriyah 8171</div><div class="pdf-record-file">diriyah-8171.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/al-murjan.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Al-Marjan</div><div class="pdf-record-file">al-murjan.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/rumah-bsp-1.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Rumah BSP (1)</div><div class="pdf-record-file">rumah-bsp-1.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/rumah-bsp-2.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Rumah BSP (2)</div><div class="pdf-record-file">rumah-bsp-2.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/neom-pssa-pssb-1.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">NEOM PSSA/PSSB (1)</div><div class="pdf-record-file">neom-pssa-pssb-1.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/neom-pssa-pssb-2.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">NEOM PSSA/PSSB (2)</div><div class="pdf-record-file">neom-pssa-pssb-2.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/taiba-west.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Taiba West</div><div class="pdf-record-file">taiba-west.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/bisha.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Bisha</div><div class="pdf-record-file">bisha.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/modon-asir.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Modon Asir</div><div class="pdf-record-file">modon-asir.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/jizan-farasan.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Jizan / Farasan</div><div class="pdf-record-file">jizan-farasan.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/tabuk-isp.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Tabuk ISP</div><div class="pdf-record-file">tabuk-isp.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/tabuk-osp.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Tabuk OSP</div><div class="pdf-record-file">tabuk-osp.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/nic-ev2.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">NIC EV2</div><div class="pdf-record-file">nic-ev2.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                    <a href="../docs/waly-alahad.pdf" target="_blank" class="pdf-record-card"><div class="pdf-record-info"><div class="pdf-record-title">Waly Al-Ahad</div><div class="pdf-record-file">waly-alahad.pdf</div></div><div class="pdf-record-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div></a>
+                </div>
+            </div>
         </div>
 
         <!-- Assets Tab -->
@@ -1796,7 +1910,7 @@
             'diriyah-8242': ['WhatsApp Image 2025-12-24 at 3.38.32 PM (1).jpeg','WhatsApp Image 2025-12-24 at 3.38.32 PM.jpeg','WhatsApp Image 2025-12-24 at 3.38.33 PM (1).jpeg','WhatsApp Image 2025-12-24 at 3.38.33 PM.jpeg'],
             'madinah-warehouse': ['image110.png','image111.png','image112.png','image113.png','image114.png','image115.png','image116.png','image117.png','image118.png','image119.png','image120.png','سكراب طيبة ٢.jpeg','سكراب طيبة.jpeg'],
             'neom-pssa-pssb': ['WhatsApp Image 2025-12-29 at 11.15.40 AM.jpeg','WhatsApp Image 2025-12-29 at 11.15.46 AM.jpeg','WhatsApp Image 2025-12-29 at 11.15.55 AM.jpeg','WhatsApp Image 2025-12-29 at 11.16.04 AM.jpeg','WhatsApp Image 2025-12-29 at 11.29.06 AM.jpeg','WhatsApp Image 2025-12-29 at 11.29.52 AM.jpeg','WhatsApp Image 2025-12-29 at 11.30.03 AM (1).jpeg','WhatsApp Image 2025-12-29 at 11.30.03 AM.jpeg','WhatsApp Image 2025-12-29 at 11.30.04 AM (1).jpeg','WhatsApp Image 2025-12-29 at 11.30.04 AM.jpeg','WhatsApp Image 2025-12-29 at 11.30.06 AM (1).jpeg','WhatsApp Image 2025-12-29 at 11.30.06 AM (2).jpeg','WhatsApp Image 2025-12-29 at 11.30.07 AM.jpeg','WhatsApp Image 2025-12-29 at 11.30.51 AM.jpeg','WhatsApp Image 2025-12-29 at 11.31.17 AM.jpeg','WhatsApp Image 2025-12-29 at 11.34.21 AM.jpeg','WhatsApp Image 2025-12-29 at 11.34.23 AM.jpeg','WhatsApp Image 2025-12-29 at 11.34.56 AM.jpeg','WhatsApp Image 2025-12-29 at 11.40.06 AM.jpeg','WhatsApp Image 2025-12-29 at 11.40.12 AM.jpeg','WhatsApp Image 2025-12-29 at 11.40.21 AM.jpeg','WhatsApp Image 2025-12-29 at 11.40.37 AM.jpeg','WhatsApp Image 2025-12-29 at 11.40.55 AM.jpeg','WhatsApp Image 2025-12-29 at 11.41.01 AM.jpeg','WhatsApp Image 2025-12-29 at 11.41.08 AM.jpeg'],
-            'tabuk-isp': ['WhatsApp Image 2025-12-30 at 12.00.48 PM.jpeg','WhatsApp Image 2025-12-30 at 12.00.49 PM (1).jpeg','WhatsApp Image 2025-12-30 at 12.00.49 PM (2).jpeg','WhatsApp Image 2025-12-30 at 12.00.49 PM.jpeg','WhatsApp Image 2025-12-30 at 12.05.53 PM.jpeg','WhatsApp Image 2025-12-30 at 12.05.54 PM (1).jpeg','WhatsApp Image 2025-12-30 at 12.05.54 PM (2).jpeg','WhatsApp Image 2025-12-30 at 12.05.54 PM.jpeg','WhatsApp Image 2025-12-30 at 12.13.58 PM (1).jpeg','WhatsApp Image 2025-12-30 at 12.13.58 PM.jpeg','WhatsApp Image 2025-12-30 at 12.13.59 PM.jpeg','WhatsApp Image 2025-12-30 at 12.17.43 PM.jpeg'],
+            'tabuk-isp': [],
             'aramco-njbp': ['aramco-njbp-1.jpeg','aramco-njbp-2.jpeg','aramco-njbp-3.jpeg','aramco-njbp-4.jpeg','aramco-njbp-5.jpeg','aramco-njbp-6.jpeg','aramco-njbp-7.jpeg','aramco-njbp-8.jpeg','aramco-njbp-9.jpeg'],
             'nic-ev2': ['nic-ev2-1.jpeg','nic-ev2-2.jpeg','nic-ev2-3.jpeg','nic-ev2-4.jpeg','nic-ev2-5.jpeg','nic-ev2-6.jpeg','nic-ev2-7.jpeg','nic-ev2-8.jpeg','nic-ev2-9.jpeg','nic-ev2-10.jpeg','nic-ev2-11.jpeg','nic-ev2-12.jpeg'],
             'bisha': ['bisha-1.jpeg','bisha-2.jpeg','bisha-3.jpeg','bisha-4.jpeg','bisha-5.jpeg','bisha-6.jpeg','bisha-7.jpeg','bisha-8.jpeg','bisha-9.jpeg'],
@@ -1826,7 +1940,9 @@
             'madinah-warehouse': { pdfs: ['../docs/madinah-warehouse.pdf'] },
             'waly-alahad': { pdfs: ['../docs/waly-alahad.pdf'] },
             'jizan-warehouse': { pdfs: ['../docs/jizan-farasan.pdf'] },
-            'farasan-island': { pdfs: ['../docs/jizan-farasan.pdf'] }
+            'farasan-island': { pdfs: ['../docs/jizan-farasan.pdf'] },
+            'taiba-west': { pdfs: ['../docs/taiba-west.pdf'] },
+            'diriyah-8171': { pdfs: ['../docs/diriyah-8171.pdf'] }
         };
 
         // Print Report Function
@@ -2108,7 +2224,7 @@
                 <div class="stat-card text-left cursor-pointer" onclick="openSiteModal('${site.id}')">
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-semibold">${site.name}</h4>
-                        <span class="badge ${site.issues === 0 ? 'badge-success' : site.priority === 'critical' ? 'badge-danger' : 'badge-warning'}">${site.issues} issues</span>
+                        <span class="badge ${site.issues === 0 ? 'badge-success' : 'badge-info'}">${site.issues} issues</span>
                     </div>
                     <p class="text-sm text-[#80D1E9]">${appData.regions[site.region]?.name || site.region}</p>
                     <div class="flex gap-4 mt-2 text-xs text-white/50">
@@ -2139,14 +2255,17 @@
                 }
             });
 
+            const resolvedKeywords = ['fire extinguisher', 'extinguisher', 'firefighting', 'camera', 'cameras', 'cctv', 'monitor'];
+            const isResolved = (text) => resolvedKeywords.some(k => text.toLowerCase().includes(k));
+
             container.innerHTML = criticalIssues.slice(0, 5).map(item => `
-                <div class="issue-card critical">
+                <div class="issue-card">
                     <div class="flex justify-between items-start">
                         <div>
                             <h4 class="font-semibold">${item.issue}</h4>
                             <p class="text-sm text-[#80D1E9]">${item.site}</p>
                         </div>
-                        <span class="badge badge-danger">Critical</span>
+                        ${isResolved(item.issue) ? '<span class="badge badge-success">Resolved</span>' : '<span class="badge badge-info">Noted</span>'}
                     </div>
                 </div>
             `).join('');
@@ -2246,14 +2365,17 @@
                 allIssues = allIssues.filter(i => i.severity === filter);
             }
 
+            const resolvedKw = ['fire extinguisher', 'extinguisher', 'firefighting', 'camera', 'cameras', 'cctv', 'monitor'];
+            const checkResolved = (text) => resolvedKw.some(k => text.toLowerCase().includes(k));
+
             container.innerHTML = allIssues.map(item => `
-                <div class="issue-card ${item.severity}">
+                <div class="issue-card">
                     <div class="flex justify-between items-start">
                         <div>
                             <h4 class="font-semibold">${item.issue}</h4>
                             <p class="text-sm text-[#80D1E9]">${item.site} - ${appData.regions[item.region]?.name || item.region}</p>
                         </div>
-                        <span class="badge ${item.severity === 'critical' ? 'badge-danger' : item.severity === 'warning' ? 'badge-warning' : 'badge-info'}">${item.severity}</span>
+                        ${checkResolved(item.issue) ? '<span class="badge badge-success">Resolved</span>' : '<span class="badge badge-info">Noted</span>'}
                     </div>
                 </div>
             `).join('');
@@ -2324,9 +2446,9 @@
                     <div class="flex justify-between items-start mb-3">
                         <div>
                             <span class="badge ${site.region === 'central' ? 'bg-[#2E3192]/50' : site.region === 'eastern' ? 'bg-emerald-500/30' : 'bg-cyan-500/30'} text-white">${appData.regions[site.region]?.name || site.region}</span>
-                            <span class="badge ${site.type === 'warehouse' ? 'badge-info' : 'badge-warning'} ml-2">${site.type}</span>
+                            <span class="badge ${site.type === 'warehouse' ? 'badge-info' : 'bg-purple-500/30 text-purple-200 border border-purple-500/30'} ml-2">${site.type}</span>
                         </div>
-                        <span class="badge ${site.issues === 0 ? 'badge-success' : site.priority === 'critical' ? 'badge-danger' : 'badge-warning'}">${site.issues} issues</span>
+                        <span class="badge ${site.issues === 0 ? 'badge-success' : 'badge-info'}">${site.issues} issues</span>
                     </div>
                     <h3 class="text-lg font-bold mb-2">${site.name}</h3>
                     ${site.highlight ? `<p class="text-xs text-emerald-400 mb-2">${site.highlight}</p>` : ''}
@@ -2343,7 +2465,7 @@
                     </div>
                     ${site.criticalIssues && site.criticalIssues.length > 0 ? `
                         <div class="mt-3 pt-3 border-t border-white/10">
-                            <p class="text-xs text-red-400 font-semibold mb-1">Critical Issues:</p>
+                            <p class="text-xs text-[#80D1E9] font-semibold mb-1">Key Issues:</p>
                             <ul class="text-xs text-white/70 space-y-1">
                                 ${site.criticalIssues.slice(0, 2).map(i => `<li>- ${i}</li>`).join('')}
                             </ul>
@@ -2357,6 +2479,14 @@
             document.querySelectorAll('#sites .filter-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
             renderSites(filter);
+        }
+
+        // Sites Sub-tab Toggle
+        function switchSitesSubtab(viewId, btn) {
+            document.querySelectorAll('.sites-subtab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('sites-view').style.display = viewId === 'sites-view' ? '' : 'none';
+            document.getElementById('signed-records-view').style.display = viewId === 'signed-records-view' ? '' : 'none';
         }
 
         // Committee
@@ -2436,7 +2566,7 @@
                     <div>
                         <div class="flex gap-2 mb-2">
                             <span class="badge ${site.region === 'central' ? 'bg-[#2E3192]/50' : site.region === 'eastern' ? 'bg-emerald-500/30' : 'bg-cyan-500/30'} text-white">${appData.regions[site.region]?.name || site.region}</span>
-                            <span class="badge ${site.type === 'warehouse' ? 'badge-info' : 'badge-warning'}">${site.type}</span>
+                            <span class="badge ${site.type === 'warehouse' ? 'badge-info' : 'bg-purple-500/30 text-purple-200 border border-purple-500/30'}">${site.type}</span>
                         </div>
                         <h2 class="text-2xl font-bold">${site.name}</h2>
                         ${site.highlight ? `<p class="text-emerald-400">${site.highlight}</p>` : ''}
@@ -2554,18 +2684,26 @@
 
                 ${site.criticalIssues && site.criticalIssues.length > 0 ? `
                     <div class="mb-6">
-                        <h3 class="font-semibold mb-3 text-red-400">Critical Issues</h3>
+                        <h3 class="font-semibold mb-3 text-[#80D1E9]">Issues Identified</h3>
                         <div class="space-y-2">
-                            ${site.criticalIssues.map(i => `<div class="issue-card critical">${i}</div>`).join('')}
+                            ${site.criticalIssues.map(i => {
+                                const rKw = ['fire extinguisher','extinguisher','firefighting','camera','cameras','cctv','monitor'];
+                                const resolved = rKw.some(k => i.toLowerCase().includes(k));
+                                return `<div class="issue-card">${i}${resolved ? ' <span class="badge badge-success ml-2">Resolved</span>' : ''}</div>`;
+                            }).join('')}
                         </div>
                     </div>
                 ` : ''}
 
                 ${site.warningIssues && site.warningIssues.length > 0 ? `
                     <div class="mb-6">
-                        <h3 class="font-semibold mb-3 text-amber-400">Warnings</h3>
+                        <h3 class="font-semibold mb-3 text-[#80D1E9]">Observations</h3>
                         <div class="space-y-2">
-                            ${site.warningIssues.map(i => `<div class="issue-card warning">${i}</div>`).join('')}
+                            ${site.warningIssues.map(i => {
+                                const rKw = ['fire extinguisher','extinguisher','firefighting','camera','cameras','cctv','monitor'];
+                                const resolved = rKw.some(k => i.toLowerCase().includes(k));
+                                return `<div class="issue-card">${i}${resolved ? ' <span class="badge badge-success ml-2">Resolved</span>' : ''}</div>`;
+                            }).join('')}
                         </div>
                     </div>
                 ` : ''}
@@ -3726,8 +3864,8 @@
             new ApexCharts(document.querySelector("#severityChart"), {
                 series: [critical, warning, info],
                 chart: { type: 'donut', height: 250, background: 'transparent' },
-                labels: ['Critical', 'Warning', 'Info'],
-                colors: ['#F87171', '#FBBF24', '#60A5FA'],
+                labels: ['High', 'Medium', 'Low'],
+                colors: ['#80D1E9', '#60A5FA', '#A78BFA'],
                 legend: { position: 'bottom', labels: { colors: '#80D1E9' } },
                 plotOptions: { pie: { donut: { size: '70%', labels: { show: true, total: { show: true, label: 'Total', color: '#80D1E9', formatter: () => critical + warning + info } } } } },
                 dataLabels: { enabled: false },

@@ -376,7 +376,7 @@
       "status": "completed",
       "inventoryStatus": "100%",
       "issues": 7,
-      "priority": "critical",
+      "priority": "high",
       "photos": 44,
       "videos": 5,
       "criticalIssues": [

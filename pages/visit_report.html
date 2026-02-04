@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/nesma-theme.css">
+    <!-- nesma-theme.css removed: file does not exist, Tailwind CDN handles styling -->
     <style>
         :root {
             --nesma-primary: #2E3192;
@@ -171,8 +171,8 @@
             background: #f3f4f6;
         }
 
-        .finding-item.critical { border-left-color: #ef4444; }
-        .finding-item.warning { border-left-color: #f59e0b; }
+        .finding-item.critical { border-left-color: #80D1E9; }
+        .finding-item.warning { border-left-color: #60A5FA; }
         .finding-item.success { border-left-color: #10b981; }
 
         .gallery-grid {
@@ -262,7 +262,7 @@
                         <span class="text-sm hidden sm:inline">Home</span>
                     </a>
                     <div class="h-6 w-px bg-white/30 hidden sm:block"></div>
-                    <img src="assets/logo-white.svg" alt="NESMA" class="h-8 lg:h-10">
+                    <img src="../assets/images/logo-white.svg" alt="NESMA" class="h-8 lg:h-10">
                     <div class="hidden md:block border-r border-white/30 h-8 mx-2"></div>
                     <div class="hidden md:block">
                         <h1 class="text-lg font-bold">MITC Visit Report</h1>
@@ -357,7 +357,7 @@
                     <div class="bg-gradient-to-r from-emerald-50 to-cyan-50 rounded-xl p-6 mb-6">
                         <p class="text-gray-700 leading-relaxed">
                             This report summarizes findings from inspections of <strong>10 sites</strong> across Eastern and Central regions,
-                            revealing critical operational challenges requiring immediate attention and strategic intervention.
+                            revealing operational challenges requiring attention and strategic intervention.
                         </p>
                     </div>
 
@@ -584,7 +584,7 @@
                         <div class="p-6">
                             <div class="grid md:grid-cols-2 gap-4 mb-4">
                                 <div class="bg-red-50 p-4 rounded-lg text-center">
-                                    <p class="text-2xl font-bold text-red-600">Critical</p>
+                                    <p class="text-2xl font-bold text-blue-600">High</p>
                                     <p class="text-xs text-gray-500">Storage Capacity</p>
                                 </div>
                                 <div class="bg-red-50 p-4 rounded-lg text-center">
@@ -756,38 +756,38 @@
                     <p class="text-gray-500 mb-6">Photos from field visits documenting conditions at various sites.</p>
 
                     <div class="gallery-grid">
-                        <div class="gallery-item" onclick="openImage('images/image141.jpeg')">
-                            <img src="images/image141.jpeg" alt="Dammam Warehouse">
+                        <div class="gallery-item" onclick="openImage('../images/image141.jpeg')">
+                            <img src="../images/image141.jpeg" alt="Dammam Warehouse">
                             <div class="p-3 bg-white">
                                 <p class="text-sm font-semibold text-gray-700">Dammam Warehouse</p>
                             </div>
                         </div>
-                        <div class="gallery-item" onclick="openImage('images/image142.jpeg')">
-                            <img src="images/image142.jpeg" alt="Storage Area">
+                        <div class="gallery-item" onclick="openImage('../images/image142.jpeg')">
+                            <img src="../images/image142.jpeg" alt="Storage Area">
                             <div class="p-3 bg-white">
                                 <p class="text-sm font-semibold text-gray-700">Storage Area</p>
                             </div>
                         </div>
-                        <div class="gallery-item" onclick="openImage('images/image151.jpeg')">
-                            <img src="images/image151.jpeg" alt="Security Issues">
+                        <div class="gallery-item" onclick="openImage('../images/image151.jpeg')">
+                            <img src="../images/image151.jpeg" alt="Security Issues">
                             <div class="p-3 bg-white">
                                 <p class="text-sm font-semibold text-gray-700">Security Issues</p>
                             </div>
                         </div>
-                        <div class="gallery-item" onclick="openImage('images/image152.jpeg')">
-                            <img src="images/image152.jpeg" alt="Equipment">
+                        <div class="gallery-item" onclick="openImage('../images/image152.jpeg')">
+                            <img src="../images/image152.jpeg" alt="Equipment">
                             <div class="p-3 bg-white">
                                 <p class="text-sm font-semibold text-gray-700">Equipment</p>
                             </div>
                         </div>
-                        <div class="gallery-item" onclick="openImage('images/image153.jpeg')">
-                            <img src="images/image153.jpeg" alt="Ramah Project">
+                        <div class="gallery-item" onclick="openImage('../images/image153.jpeg')">
+                            <img src="../images/image153.jpeg" alt="Ramah Project">
                             <div class="p-3 bg-white">
                                 <p class="text-sm font-semibold text-gray-700">Ramah Project</p>
                             </div>
                         </div>
-                        <div class="gallery-item" onclick="openImage('images/image219.jpeg')">
-                            <img src="images/image219.jpeg" alt="Tuwaiq Warehouses">
+                        <div class="gallery-item" onclick="openImage('../images/image219.jpeg')">
+                            <img src="../images/image219.jpeg" alt="Tuwaiq Warehouses">
                             <div class="p-3 bg-white">
                                 <p class="text-sm font-semibold text-gray-700">Tuwaiq Warehouses</p>
                             </div>
