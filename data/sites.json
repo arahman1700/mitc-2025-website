@@ -12,7 +12,7 @@
     "totalVideos": 6,
     "totalRegions": 5,
     "sitesWithPhotos": 22,
-    "issuesIdentified": 45,
+    "issuesIdentified": 34,
     "targetValue": 500000
   },
   "objectives": [
@@ -168,36 +168,34 @@
       "type": "warehouse",
       "status": "completed",
       "inventoryStatus": "100%",
-      "issues": 4,
-      "priority": "medium",
+      "issues": 0,
+      "priority": "low",
       "photos": 47,
       "videos": 0,
       "criticalIssues": [],
-      "warningIssues": [
-        "Expired Fire Extinguisher",
-        "Weak Store Locks",
-        "Store office door lock weak"
-      ],
-      "infoIssues": [
-        "Water Pump Motor Not Working"
+      "warningIssues": [],
+      "infoIssues": [],
+      "resolvedIssues": [
+        "Expired Fire Extinguisher - Replaced and recertified",
+        "Weak Store Locks - Upgraded to heavy-duty locks",
+        "Store office door lock weak - Lock replaced",
+        "Water Pump Motor Not Working - Repaired",
+        "Firefighting system - Repaired and certified",
+        "Camera monitoring system - Replaced",
+        "Scrap cables and metals - Disposal plan executed",
+        "Airport project materials - Cleared"
       ],
       "keyFindings": [
         "100% inventory completion achieved",
-        "Large quantities of scrap cables and metals occupying storage space",
-        "Substantial quantity of materials from closed Airport project",
-        "Security vulnerabilities with insecure locks"
+        "All previously identified issues have been resolved",
+        "Security upgrades completed",
+        "Scrap disposal and organization completed"
       ],
       "recommendations": {
-        "immediate": [
-          "Repair firefighting system and obtain certification",
-          "Replace camera monitoring system",
-          "Replace expired fire extinguishers"
-        ],
+        "immediate": [],
         "shortTerm": [
-          "Upgrade door locks for all storage areas",
-          "Repair or replace water pump",
-          "Conduct full security audit",
-          "Develop plan for disposal of obsolete stock"
+          "Continue regular maintenance schedule",
+          "Conduct periodic security audits"
         ]
       },
       "hasPhotos": true,
@@ -375,32 +373,34 @@
       "type": "warehouse",
       "status": "completed",
       "inventoryStatus": "100%",
-      "issues": 7,
-      "priority": "high",
+      "issues": 4,
+      "priority": "medium",
       "photos": 44,
       "videos": 5,
       "criticalIssues": [
-        "Faulty Main Warehouse Door",
         "Significant Scrap Accumulation (40% space)",
         "Lack of Site Supervision"
       ],
       "warningIssues": [
         "Material Organization Issues",
         "Obsolete Stock from Closed Projects",
-        "Cable Wastage Issues",
-        "Unrecorded Security Entries"
+        "Cable Wastage Issues"
+      ],
+      "resolvedIssues": [
+        "Faulty Main Warehouse Door - Repaired",
+        "Security Cameras - Installed",
+        "Security Entry Logging - Implemented"
       ],
       "keyFindings": [
         "100% inventory completion achieved",
-        "Faulty door cannot be secured - significant security risk",
-        "40% storage space occupied by scrap materials",
+        "Main warehouse door repaired and secured",
+        "Security cameras installed and entry logging implemented",
+        "40% storage space still occupied by scrap materials",
         "Project engineers frequently in offices rather than on-site",
-        "Unreasonable waste in used cables",
-        "Subcontractors operating without adequate supervision"
+        "Unreasonable waste in used cables"
       ],
       "recommendations": {
         "immediate": [
-          "Repair main warehouse door immediately",
           "Assign dedicated site supervisor",
           "Establish subcontractor work plans"
         ],

@@ -143,8 +143,8 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 <div class="stat-box p-4 text-center">
-                    <p class="text-2xl font-bold text-red-600">7</p>
-                    <p class="text-sm text-gray-500">Issues Found</p>
+                    <p class="text-2xl font-bold text-blue-600">4</p>
+                    <p class="text-sm text-gray-500">Open Issues (3 Resolved)</p>
                 </div>
                 <div class="stat-box p-4 text-center">
                     <p class="text-2xl font-bold text-emerald-600">100%</p>
@@ -155,7 +155,7 @@
                     <p class="text-sm text-gray-500">Visit Date</p>
                 </div>
                 <div class="stat-box p-4 text-center">
-                    <p class="text-2xl font-bold text-amber-600">High</p>
+                    <p class="text-2xl font-bold text-blue-600">Medium</p>
                     <p class="text-sm text-gray-500">Priority Level</p>
                 </div>
             </div>
@@ -178,35 +178,71 @@
                         Issues & Observations
                     </h2>
 
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div class="issue-card critical p-5">
+                    <!-- Actions Taken (Resolved) -->
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Actions Taken
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="issue-card info p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-red-600 font-bold text-sm">1</span>
+                                <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-800 mb-1">Faulty Main Warehouse Door</h4>
-                                    <p class="text-sm text-gray-500">Main entrance door is not functioning properly, compromising security</p>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Main Warehouse Door Repaired <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs rounded-full font-semibold">Resolved</span></h4>
+                                    <p class="text-sm text-gray-500">Main entrance door has been repaired and secured</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="issue-card critical p-5">
+                        <div class="issue-card info p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-red-600 font-bold text-sm">2</span>
+                                <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Security Cameras Installed <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs rounded-full font-semibold">Resolved</span></h4>
+                                    <p class="text-sm text-gray-500">CCTV security cameras installed and operational</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="issue-card info p-5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Security Entry Logging Implemented <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs rounded-full font-semibold">Resolved</span></h4>
+                                    <p class="text-sm text-gray-500">Entry/exit logging system now in place at all access points</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Remaining Open Issues -->
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Open Issues (4 Remaining)
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="issue-card info p-5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-blue-600 font-bold text-sm">1</span>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800 mb-1">Significant Scrap Accumulation</h4>
-                                    <p class="text-sm text-gray-500">Large quantities of scrap cables and metals occupying valuable storage space</p>
+                                    <p class="text-sm text-gray-500">40% of storage space occupied by scrap cables and metals</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="issue-card critical p-5">
+                        <div class="issue-card info p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-red-600 font-bold text-sm">3</span>
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-blue-600 font-bold text-sm">2</span>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-800 mb-1">Lack of Site Supervision</h4>
@@ -215,38 +251,14 @@
                             </div>
                         </div>
 
-                        <div class="issue-card warning p-5">
+                        <div class="issue-card info p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-amber-600 font-bold text-sm">4</span>
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-blue-600 font-bold text-sm">3</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-800 mb-1">Material Organization Issues</h4>
-                                    <p class="text-sm text-gray-500">Poor organization and labeling of stored materials</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="issue-card warning p-5">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-amber-600 font-bold text-sm">5</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 mb-1">Unpaved Storage Ground</h4>
-                                    <p class="text-sm text-gray-500">Outdoor storage areas lack proper paving, affecting material condition</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="issue-card warning p-5">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-amber-600 font-bold text-sm">6</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 mb-1">Obsolete Stock from Closed Projects</h4>
-                                    <p class="text-sm text-gray-500">Materials from completed projects still occupying storage space</p>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Material Organization & Obsolete Stock</h4>
+                                    <p class="text-sm text-gray-500">Poor organization and obsolete materials from closed projects still occupying space</p>
                                 </div>
                             </div>
                         </div>
@@ -254,11 +266,11 @@
                         <div class="issue-card info p-5">
                             <div class="flex items-start gap-3">
                                 <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-blue-600 font-bold text-sm">7</span>
+                                    <span class="text-blue-600 font-bold text-sm">4</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-800 mb-1">Subcontractor Work Plan Missing</h4>
-                                    <p class="text-sm text-gray-500">No clear work plans established with subcontractors</p>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Cable Wastage Issues</h4>
+                                    <p class="text-sm text-gray-500">Unreasonable waste in used cables requiring investigation</p>
                                 </div>
                             </div>
                         </div>
