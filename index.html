@@ -2156,6 +2156,17 @@
             'taiba-west': { pdfs: ['docs/taiba-west.pdf'] },
             'diriyah-8171': { pdfs: ['docs/diriyah-8171.pdf'] }
         };
+        // Site Videos Mapping
+        const siteVideos = {
+            'dammam-warehouse': [
+                { file: 'VAG8eh3m8mc.mp4', title: 'Warehouse Overview 1' },
+                { file: 'VAG8emV-miE.mp4', title: 'Warehouse Overview 2' },
+                { file: 'VAG8etH_brs.mp4', title: 'Material Storage Area' },
+                { file: 'VAG8eu8kIq4.mp4', title: 'Outdoor Storage' },
+                { file: 'VAG8evXP-Lc.mp4', title: 'Facility Walkthrough' }
+            ]
+        };
+
 
         // Print Report Function
         function printReport() {
@@ -2775,6 +2786,7 @@
             // Get photos for this site
             const photos = sitePhotos[site.id] || [];
             const photoPath = site.folderPath ? site.folderPath + '/photos/' : '';
+            const videoPath = site.folderPath ? site.folderPath + '/videos/' : '';
 
             // Get files for this site
             const files = siteFiles[site.id] || {};
@@ -2880,6 +2892,19 @@
                                     </div>
                                 `).join('')}
                             </div>
+                            ${(siteVideos[site.id] && siteVideos[site.id].length > 0) ? `
+                                <h4 class="font-semibold mt-6 mb-3 text-white">Videos (${siteVideos[site.id].length})</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    ${siteVideos[site.id].map(v => `
+                                        <div class="rounded-xl overflow-hidden bg-white/10">
+                                            <video controls class="w-full h-40 object-cover">
+                                                <source src="${videoPath}${v.file}" type="video/mp4">
+                                            </video>
+                                            <div class="p-2 text-sm text-white/70">${v.title}</div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
                         </div>
                     ` : `
                         <div class="mb-6 p-4 bg-white/5 rounded-lg text-center text-white/50">
